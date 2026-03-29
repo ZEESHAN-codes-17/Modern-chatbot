@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tourism AI Advisor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="floating-icon" style="top: 100px; right: 200px;">✨</div>
+    <div class="floating-icon" style="top: 300px; right: 50px;">🌍</div>
+    <div class="floating-icon" style="bottom: 200px; right: 150px;">⭐</div>
+
+    <div class="container">
+        <div class="header">
+            <div class="sparkle">✦</div>
+            <h1>Helping you<br>To Travel the World</h1>
+            <p>Travel smart and free All the open destinations travel tips to fulfill! Let the brand of your Travel Assistant suggest to define your Travel mood.</p>
+            <button class="start-btn" onclick="startConversation()">Start Chat</button>
+        </div>
+
+        <div class="chat-section">
+            <div class="left-column">
+                <div class="message-card" onclick="sendPredefined('Tell me about tour prices')">
+                    <div class="icon-circle">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <path d="M12 6v6l4 2"></path>
+                        </svg>
+                    </div>
+                    <h3>Hey there...</h3>
+                    <p>Show me all available seasonal tour packages and their pricing</p>
+                </div>
+
+                <div class="message-card" onclick="sendPredefined('What is the best tour for summer?')">
+                    <div class="icon-circle">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32l1.41 1.41M2 12h2m16 0h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path>
+                            <circle cx="12" cy="12" r="5"></circle>
+                        </svg>
+                    </div>
+                    <h3>Hey, I wanna go travel but</h3>
+                    <p>recommend me the best tour package based on budget and season</p>
+                </div>
+            </div>
+
+            <div class="right-column">
+                <div class="response-card">
+                    <div class="avatar">🌍</div>
+                    <div class="response-content">
+                        <h4>Your Tour</h4>
+                        <p>We have amazing seasonal tours! Check out our winter package for $70.</p>
+                    </div>
+                </div>
+
+                <div class="response-card">
+                    <div class="avatar">🎯</div>
+                    <div class="response-content">
+                        <h4>Best option</h4>
+                        <p>For a popular choice, our Spring tour at $50 offers great value!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="conversation-area" id="conversationArea">
+            <div class="typing-indicator" id="typingIndicator">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+        <div class="chat-input-section">
+            <div class="input-wrapper">
+                <input type="text" class="chat-input" id="chatInput" placeholder="Type your question...">
+                <button class="send-button" onclick="sendMessage()">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
